@@ -1,10 +1,12 @@
 # Quant-trading
-
+量化交易
 <br>
 
 ## Intro
 
 Most scripts inside this repository are technical indicator automated trading. These scripts include various types of momentum trading, opening range breakout and statistical arbitrage strategies. Yet, quantitative trading is not only about technical analysis. It can refer to computational finance to exploit derivative price mismatch, pattern recognition on alternative datasets to generate alphas or low latency order execution in the market microstructure. Hence, there are a few ongoing projects inside this repository. These projects are mostly strange trading ideas I come up with to beat the market (or so I thought). There is no options strategy or HFT strategy simply because option data and ultra high frequency data are very expensive to acquire (even consider platforms like Quantopian or Quandl). Additionally, please note that, all scripts are historical data backtesting (basically via Python, not C++, maybe Julia in the near future). The assumption is that all trades are frictionless so we don't have to worry about slippage or liquidity. 
+
+这个仓库里的大多数脚本涉及到自动化交易的技术方面。这些脚本包括多种类型的动量交易，开盘区间突破和统计套利策略。
 
 ### Table of Contents
 
