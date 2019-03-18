@@ -51,9 +51,11 @@ Most scripts inside this repository are technical indicator automated trading. T
 移动平均震荡指标
 
 MACD oscillator is trading strategy 101. MACD refers to Moving Average Convergence/Divergence. It is a momentum trading strategy which holds the belief that upward/downward momentum has more impact on short term moving average than long term moving average. It only takes 5 minutes for any bloke with no background in finance to trade with MACD signals. Regarding the simplicity of MACD oscillator, it is the most common strategy among the non-professionals in the market. In behavioral economics, the more people believe in the strategy, the more effective the strategy becomes (not always true, e.g. 2008). Therefore, we should not underestimate the power of MACD oscillator.
+
 移动平均震荡指标是101号交易策略。MACD指移动平均收敛或差异。他是一个动量交易策略，理念是向上/向下的动量对短期的移动平均比长期的移动平均影响更大。对于任何没有金融背景的人，只需要5分钟就可以通过MACD信号进行交易。尽管MACD策略很简单，他是市场中不太专业中最普遍的策略。就行为经济而言，越多人相信该策略，该策略越有效（但不是一直是这样，比如2008年）。所以我们不应该低估MACD策略的力量。
 
 For the strategy itself, we compute long term moving average and short term moving average on the close price of a given stock. To generate the trading signal, we implement a comparison between the moving averages of different time horizons. When short term moving average is above long term moving average, we long the given stock accordingly. Vice versa.
+
 对这个策略本身，对于给定的市场，我们计算闭市价格的长期移动平均和短期移动平均。为了生成交易信号，我们比较不同时期的移动平均。当短期移动平均大于长期移动平均，我们相应的持有给定的股票。反之亦然。
 
 ![alt text](https://github.com/je-suis-tm/quant-trading/blob/master/preview/macd%20positions.png)
