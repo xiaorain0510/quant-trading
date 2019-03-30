@@ -68,8 +68,13 @@ For the strategy itself, we compute long term moving average and short term movi
 
 Pair trading is the basic form of statistics arbitrage. It relies on the assumption that two cointegrated stocks would not drift too far away from each other. First step, we select two stocks and run <a href=https://en.wikipedia.org/wiki/Error_correction_model#Engle_and_Granger_2-step_approach>Engle-Granger two step analysis</a>. Once the criteria of cointegration is met, we standardize the residual and set one sigma away (two tailed) as the threshold. After that, we compute the current standardized residual of the selected stocks accordingly. When the standardized residual exceeds the threshold, it generates the trading signal. The simple rule is we always long the cheap stock and short the expensive stock. 
 
-配对交易是统计套利交易的一种基本形式。他基于这样的假设，两个较相关的股票不会彼此偏离太多。
+配对交易是统计套利交易的一种基本形式。他基于这样的假设，两个较相关的股票不会彼此偏离太多。第一步，我们选择两只股票，然后运行Engle-Granger 两步分析。一旦这两只股票达到相关的准则，我们对两只股票的差值进行标准化，并设定阈值标准。然后，我们计算两只股票当前的标准差值。当值超过我们之前设定的阈值标准，就产生交易信号。基本准则是我们总是买入便宜的股票，卖出贵的股票。
 
+The core idea of pair trading is <a href=https://en.wikipedia.org/wiki/Cointegration>cointegration</a>. Metaphorically speaking, cointegration is like a couple in a clingy relationship where two parties are crazy-glued together. Yet, most relationships break sooner or later, and only the very few can make it to the marriage (from a statistics perspective, not being pessimistic). Hence, it is important to frequently check on the status quo of cointegration before any pair trading order execution (the same applies to relationships).
+
+配对交易的核心思想是相关程度。打个比方，相关度就像是热恋中的情侣，紧密的联系在一起。然而，大多数关系总会或短或长的破碎，只有少部分能真正走入婚姻的殿堂。所以在真的交易之前需要时常的检查配对的股票状态
+
+The core idea of pair trading is <a href=https://en.wikipedia.org/wiki/Cointegration>cointegration</a>. Metaphorically speaking, cointegration is like a couple in a clingy relationship where two parties are crazy-glued together. Yet, most relationships break sooner or later, and only the very few can make it to the marriage (from a statistics perspective, not being pessimistic). Hence, it is important to frequently check on the status quo of cointegration before any pair trading order execution (the same applies to relationships).
 The core idea of pair trading is <a href=https://en.wikipedia.org/wiki/Cointegration>cointegration</a>. Metaphorically speaking, cointegration is like a couple in a clingy relationship where two parties are crazy-glued together. Yet, most relationships break sooner or later, and only the very few can make it to the marriage (from a statistics perspective, not being pessimistic). Hence, it is important to frequently check on the status quo of cointegration before any pair trading order execution (the same applies to relationships).
 
 ![alt text](https://github.com/je-suis-tm/quant-trading/blob/master/preview/pair%20trading%20eg%20two%20step.PNG)
