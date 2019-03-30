@@ -100,9 +100,13 @@ The rules of Heikin-Ashi can be found in <a href=https://quantiacs.com/Blog/Intr
 
 ### 4. London Breakout
 
+伦敦突破
+
 To one of my favourite cities in the world! Proud to be a Londoner!
 
 London Breakout is an intra daily opening range breakout strategy. Basically, it is a fascinating information arbitrage across different markets in different time zones. FX market runs 24/7 globally. For instance, you cannot long the stock of Ford in ASX simply because Ford is listed in NYSE. As FX market is decentralised, you can long any currency pair in any market as long as the market is open. That leaves a door to take a peek at the activity in a closed foreign FX market before the opening of domestic FX market.
+
+伦敦突破是一种日内开盘范围突破策略。这是一种极好的通过在不同时区，不同市场的套利信息。外汇交易是全球范围内的7*24小时，不间断的。因为外汇市场是去中心化的，只要市场开放，你可以在任何市场持有任何货币。这留下了一道门，可以在国内外汇市场开放前，在外围外汇市场取得最高点。
 
 Back to London Breakout, London and Tokyo are two of the largest FX markets in the world. Tokyo FX trading hour is GMT 0:00 a.m. - GMT 8:59am. London FX trading hour (no summer daylight saving) begins at GMT 8:00 a.m. Even though there is an hour of overlap, the crucial timeframe of London Breakout is GMT 7:00 a.m. - GMT 7:59 a.m. a.k.a. the last trading hour before the opening of London market. The price movement of the crucial timeframe incorporates the information of all the overnight activities of financial market (from the perspective of the current time zone).
 
