@@ -6,7 +6,7 @@
 
 Most scripts inside this repository are technical indicator automated trading. These scripts include various types of momentum trading, opening range breakout and statistical arbitrage strategies. Yet, quantitative trading is not only about technical analysis. It can refer to computational finance to exploit derivative price mismatch, pattern recognition on alternative datasets to generate alphas or low latency order execution in the market microstructure. Hence, there are a few ongoing projects inside this repository. These projects are mostly strange trading ideas I come up with to beat the market (or so I thought). There is no options strategy or HFT strategy simply because option data and ultra high frequency data are very expensive to acquire (even consider platforms like Quantopian or Quandl). Additionally, please note that, all scripts are historical data backtesting (basically via Python, not C++, maybe Julia in the near future). The assumption is that all trades are frictionless so we don't have to worry about slippage or liquidity. 
 
-这个仓库里的大多数脚本涉及到自动化交易的技术方面。这些脚本包括多种类型的动量交易，开盘区间突破和统计套利策略。当然，量化交易不仅仅包括技术方面的分析。他还可以指用来探索衍生品价格不匹配的计算金融，通过在数据集上生成低延迟交易指令的模式识别。所以本仓库里还有很多正在进行的项目。这些项目仅仅是我个人的思考。。。
+这个仓库里的大多数脚本涉及到自动化交易的技术方面。这些脚本包括多种类型的动量交易，开盘区间突破和统计套利策略。当然，量化交易不仅仅包括技术方面的分析。他还可以指用来探索衍生品价格不匹配的计算金融，通过在数据集上生成低延迟交易指令的模式识别。所以本仓库里还有很多正在进行的项目。这些项目仅仅是我个人的思考。因为高频数据很难得到，所以我们没有可供选择的策略。另外，需要注意到，所有脚本都使用的是历史数据。我们的基本假设是所有的交易都是无摩擦的，所以我们无需考虑量的下跌和流动性问题。
 
 ### Table of Contents
 
@@ -64,7 +64,11 @@ For the strategy itself, we compute long term moving average and short term movi
 
 ### 2. Pair trading
 
+配对交易
+
 Pair trading is the basic form of statistics arbitrage. It relies on the assumption that two cointegrated stocks would not drift too far away from each other. First step, we select two stocks and run <a href=https://en.wikipedia.org/wiki/Error_correction_model#Engle_and_Granger_2-step_approach>Engle-Granger two step analysis</a>. Once the criteria of cointegration is met, we standardize the residual and set one sigma away (two tailed) as the threshold. After that, we compute the current standardized residual of the selected stocks accordingly. When the standardized residual exceeds the threshold, it generates the trading signal. The simple rule is we always long the cheap stock and short the expensive stock. 
+
+配对交易是统计套利交易的一种基本形式。他基于这样的假设，两个较相关的股票不会彼此偏离太多。
 
 The core idea of pair trading is <a href=https://en.wikipedia.org/wiki/Cointegration>cointegration</a>. Metaphorically speaking, cointegration is like a couple in a clingy relationship where two parties are crazy-glued together. Yet, most relationships break sooner or later, and only the very few can make it to the marriage (from a statistics perspective, not being pessimistic). Hence, it is important to frequently check on the status quo of cointegration before any pair trading order execution (the same applies to relationships).
 
