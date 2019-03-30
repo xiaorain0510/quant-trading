@@ -72,10 +72,7 @@ Pair trading is the basic form of statistics arbitrage. It relies on the assumpt
 
 The core idea of pair trading is <a href=https://en.wikipedia.org/wiki/Cointegration>cointegration</a>. Metaphorically speaking, cointegration is like a couple in a clingy relationship where two parties are crazy-glued together. Yet, most relationships break sooner or later, and only the very few can make it to the marriage (from a statistics perspective, not being pessimistic). Hence, it is important to frequently check on the status quo of cointegration before any pair trading order execution (the same applies to relationships).
 
-配对交易的核心思想是相关程度。打个比方，相关度就像是热恋中的情侣，紧密的联系在一起。然而，大多数关系总会或短或长的破碎，只有少部分能真正走入婚姻的殿堂。所以在真的交易之前需要时常的检查配对的股票状态
-
-The core idea of pair trading is <a href=https://en.wikipedia.org/wiki/Cointegration>cointegration</a>. Metaphorically speaking, cointegration is like a couple in a clingy relationship where two parties are crazy-glued together. Yet, most relationships break sooner or later, and only the very few can make it to the marriage (from a statistics perspective, not being pessimistic). Hence, it is important to frequently check on the status quo of cointegration before any pair trading order execution (the same applies to relationships).
-The core idea of pair trading is <a href=https://en.wikipedia.org/wiki/Cointegration>cointegration</a>. Metaphorically speaking, cointegration is like a couple in a clingy relationship where two parties are crazy-glued together. Yet, most relationships break sooner or later, and only the very few can make it to the marriage (from a statistics perspective, not being pessimistic). Hence, it is important to frequently check on the status quo of cointegration before any pair trading order execution (the same applies to relationships).
+配对交易的核心思想是相关程度。打个比方，相关度就像是热恋中的情侣，紧密的联系在一起。然而，大多数关系总会或短或长的破碎，只有少部分能真正走入婚姻的殿堂。所以在真的交易之前需要时常的检查配对的股票状态。
 
 ![alt text](https://github.com/je-suis-tm/quant-trading/blob/master/preview/pair%20trading%20eg%20two%20step.PNG)
 
@@ -85,9 +82,15 @@ The core idea of pair trading is <a href=https://en.wikipedia.org/wiki/Cointegra
 
 ### 3. Heikin-Ashi candlestick
 
+平均K线图
+
 Heikin-Ashi, the exotic name actually referring to 'Average Bar' in Japanese, is an alternative style of candlestick chart. The sophisticated rules of Heiki-Ashi are designed to filter out the noise for momentum trading. Hence, Heikin-Ashi shows more consecutive bars in contrast to the standard candlestick, which makes price momentum and reverse points more distinguishable in figures. Arguably it should outperform the standard candlestick in sideways and choppy markets. 
 
+Heikin-Ash，是一个指日本的“Average Bar”的带有异域风情色彩的名字，是K线图的另外一个表现形式。Heiki-Ashi的设计原则就是为了过滤动量交易的噪音。所以，相较于标准的K线图，Heikin-Ashi表现出了更多连续的块。因此可以让价格和相反点在图形中表现的更加清晰。可论证的是，他在波动的市场中优于标准的K线图。
+
 For the strategy itself, initially we make a few transformations on four vital benchmarks - Open, Close, High, Low. The next step is to apply unique Heikin-Ashi rules on Heikin-Ashi Open, Close, High, Low to generate trading signals. The downside of Heikin-Ashi (or any momentum trading strategies) is the slow response. Thus, we should set up the stop loss position accordingly so that we don't get caught up in any flash crash.
+
+对于这个交易策略本身来说，我们在四个基础的指标上做了一些变换-开市，闭市，最高点和最低点。下一步就是将独特的Heikin-Ashi规则用于Heikin-Ashi的高，开，低，闭来生成交易信号。该策略的缺点就是反应较慢。所以我们需要设置止损点。
 
 The rules of Heikin-Ashi can be found in <a href=https://quantiacs.com/Blog/Intro-to-Algorithmic-Trading-with-Heikin-Ashi.aspx>Quantiacs</a>.
 
